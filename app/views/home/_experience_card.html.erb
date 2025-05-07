@@ -1,0 +1,14 @@
+<div class="card mb-4">
+  <div class="card-header" style="background-color: var(--dark-secondary); color: var(--light);">
+    <h5 class="mb-0">Work Experience</h5>
+  </div>
+  <div class="card-body">
+    <% @experiences.each do |exp| %>
+      <div class="mb-4">
+        <h5><%= exp.title %></h5>
+        <h6 class="text-muted"><%= exp.company %> | <%= exp.start_date %> - <%= exp.end_date %></h6>
+        <p><%= simple_format(exp.description) %></p>
+      </div>
+    <% end %>
+  </div>
+</div>

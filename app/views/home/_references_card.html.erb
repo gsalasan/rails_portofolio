@@ -1,0 +1,20 @@
+<div class="card mb-4">
+  <div class="card-header" style="background-color: var(--dark-secondary); color: var(--light);">
+    <h5 class="mb-0">References</h5>
+  </div>
+  <div class="card-body">
+    <div class="row">
+      <% @references.each do |ref| %>
+        <div class="col-md-6 mb-3">
+          <div class="card h-100">
+            <div class="card-body">
+              <h6 class="card-title"><%= ref.name %></h6>
+              <p class="card-text text-muted"><%= ref.position %></p>
+              <p class="card-text"><%= mail_to ref.email %></p>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

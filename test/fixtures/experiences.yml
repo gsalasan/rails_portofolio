@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  company: MyString
+  start_date: 2025-05-03
+  end_date: 2025-05-03
+  description: MyText
+
+two:
+  title: MyString
+  company: MyString
+  start_date: 2025-05-03
+  end_date: 2025-05-03
+  description: MyText

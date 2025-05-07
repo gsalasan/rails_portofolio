@@ -1,0 +1,15 @@
+<div class="card mb-4">
+  <div class="card-header" style="background-color: var(--dark-secondary); color: var(--light);">
+    <h5 class="mb-0">Career Highlights</h5>
+  </div>
+  <div class="card-body">
+    <% @projects.each do |project| %>
+      <div class="project-item mb-4">
+        <h5><%= project.title %></h5>
+        <p><%= simple_format(project.description) %></p>
+        <p class="text-success"><strong>Impact:</strong> <%= project.impact %></p>
+        <p class="text-muted"><strong>Technologies:</strong> <%= project.technologies %></p>
+      </div>
+    <% end %>
+  </div>
+</div>

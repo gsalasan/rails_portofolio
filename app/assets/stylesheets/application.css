@@ -1,0 +1,91 @@
+/*
+ * This is a manifest file that'll be compiled into application.css.
+ *
+ * With Propshaft, assets are served efficiently without preprocessing steps. You can still include
+ * application-wide styles in this file, but keep in mind that CSS precedence will follow the standard
+ * cascading order, meaning styles declared later in the document or manifest will override earlier ones,
+ * depending on specificity.
+ *
+ * Consider organizing styles into separate files for maintainability.
+ */
+ /* Custom color variables */
+:root {
+    --dark-primary: #222831;
+    --dark-secondary: #393E46;
+    --accent: #948979;
+    --light: #DFD0B8;
+  }
+  
+  body {
+    background-color: var(--light);
+    color: var(--dark-primary);
+  }
+  
+  .card {
+    border: none;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+    background-color: white;
+  }
+  
+  .card-header {
+    background-color: var(--dark-secondary) !important;
+    color: var(--light) !important;
+    font-weight: 600;
+  }
+  
+  .navbar {
+    background-color: var(--dark-primary);
+  }
+  
+  .btn-primary {
+    background-color: var(--accent);
+    border-color: var(--accent);
+  }
+  
+  .btn-primary:hover {
+    background-color: var(--dark-secondary);
+    border-color: var(--dark-secondary);
+  }
+  
+  .experience-item, .project-item {
+    border-left: 3px solid var(--accent);
+    padding-left: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .badge.bg-secondary {
+    background-color: var(--dark-secondary) !important;
+    color: var(--light);
+  }
+  
+  a {
+    color: var(--dark-secondary);
+  }
+  
+  a:hover {
+    color: var(--accent);
+  }
+
+  /* Hover effects for cards */
+  .card:hover {
+    transform: translateY(-2px);
+    transition: transform 0.2s ease;
+  }
+  
+  /* Better spacing for sections */
+  section {
+    margin-bottom: 2rem;
+  }
+  
+  /* Style for the profile image */
+  .profile-img {
+    border: 3px solid var(--accent);
+  }
+  
+  /* Style for skills badges */
+  .skill-badge {
+    background-color: var(--dark-secondary);
+    color: var(--light);
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
+  }

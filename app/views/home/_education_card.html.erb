@@ -1,0 +1,14 @@
+<div class="card mb-4">
+  <div class="card-header" style="background-color: var(--dark-secondary); color: var(--light);">
+    <h5 class="mb-0">Education</h5>
+  </div>
+  <div class="card-body">
+    <% @educations.each do |edu| %>
+      <div class="mb-3">
+        <h5><%= edu.institution %></h5>
+        <h6 class="text-muted"><%= edu.degree %> in <%= edu.field %></h6>
+        <p><%= edu.start_date %> - <%= edu.end_date %></p>
+      </div>
+    <% end %>
+  </div>
+</div>
