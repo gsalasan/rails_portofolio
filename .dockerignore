@@ -20,6 +20,11 @@
 !/log/.keep
 !/tmp/.keep
 
+log/*
+tmp/*
+*.log
+
+
 # Ignore pidfiles, but keep the directory.
 /tmp/pids/*
 !/tmp/pids/.keep

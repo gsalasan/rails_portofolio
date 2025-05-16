@@ -1,25 +1,29 @@
-# Use the official Ruby image
 FROM ruby:3.2.2
 
-# Install dependencies
-RUN apt-get update -qq && apt-get install -y build-essential libpq-dev nodejs postgresql-client
-
-# Create app directory
-RUN mkdir /app
+# Set working directory
 WORKDIR /app
 
-# Install gems
+# Install OS dependencies
+RUN apt-get update -qq && apt-get install -y nodejs postgresql-client yarn
+
+# Copy Gemfiles and install gems
 COPY Gemfile Gemfile.lock ./
 RUN bundle install
 
-# Copy the application
+# Copy entire app
 COPY . .
 
 # Precompile assets
-RUN bundle exec rails assets:precompile
+RUN bundle exec rake assets:precompile
 
 # Expose port
 EXPOSE 3000
 
-# Start the application
-CMD ["bundle", "exec", "rails", "server", "-b", "0.0.0.0"]
+# Run the server
+CMD ["rails", "server", "-b", "0.0.0.0"]
+
+
+RUN chmod +x /usr/bin/entrypoint.sh
+
+COPY entrypoint.sh /usr/bin/entrypoint.sh
+ENTRYPOINT ["entrypoint.sh"]
