@@ -1,5 +1,5 @@
 # Use ARM-compatible Ruby image
-FROM --platform=linux/arm64 ruby:3.2.2-slim-bookworm
+FROM --platform=arm64 ruby:3.2.2-slim-bookworm
 
 # Install ARM-compatible dependencies
 RUN apt-get update -qq && \
